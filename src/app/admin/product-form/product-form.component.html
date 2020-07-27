@@ -1,0 +1,38 @@
+<form>
+
+    <div class="form-group">
+        <label for="title">ProjectName</label>
+        <input id="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="price">FrontEnd</label>
+        <input id="price" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="price">BackEnd</label>
+        <input id="price" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="category">CloudService</label>
+        <select id="category" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let c of services" [value]="c.id">
+                {{c.name}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let c of categories" [value]="c.id">
+                {{c.name}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="comment">Enter Other Details</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <button class="btn btn-primary">Submit</button>
+</form>
